@@ -29,21 +29,61 @@ body {
   color: var(--ln-color-text);
 }
 
-.header-display-desktop a,
-.header-display-mobile a,
-.header-nav-folder-content a {
-  color: var(--ln-color-sage);
-}
-
-.header-display-desktop a:hover,
-.header-display-mobile a:hover {
-  color: var(--ln-color-terracotta);
+#header,
+.header {
+  --header-nav-link-color: var(--ln-color-sage);
+  --tweak-header-nav-link-color: var(--ln-color-sage);
+  --tweak-header-nav-link-color-hover: var(--ln-color-terracotta);
+  --header-link-color: var(--ln-color-sage);
 }
 
 .header-display-desktop,
-.header-display-mobile {
+.header-display-mobile,
+.header-menu,
+.header-menu-nav-wrapper {
   font-family: var(--ln-font-body);
   background-color: var(--ln-color-white);
+}
+
+.header-nav-item a,
+.header-nav-folder-title,
+.header-nav-folder-item a,
+.header-menu-nav-item a,
+.header-menu-nav-list a,
+.header-menu-controls-control,
+.header-menu-controls-control a,
+.header-actions-action-link,
+.header-actions-action--cart a,
+.header-burger-inner .burger-bar,
+.header-burger-inner::before,
+.header-burger-inner::after {
+  color: var(--ln-color-sage) !important;
+  fill: var(--ln-color-sage) !important;
+}
+
+.header-nav-item a:hover,
+.header-nav-folder-title:hover,
+.header-nav-folder-item a:hover,
+.header-menu-nav-item a:hover,
+.header-menu-nav-list a:hover,
+.header-actions-action-link:hover,
+.header-actions-action--cart a:hover {
+  color: var(--ln-color-terracotta) !important;
+  fill: var(--ln-color-terracotta) !important;
+}
+
+.header-nav-item--active a,
+.header-menu-nav-item--active a {
+  color: var(--ln-color-terracotta) !important;
+  fill: var(--ln-color-terracotta) !important;
+}
+
+.header-nav-folder-content {
+  background-color: var(--ln-color-white);
+}
+
+.header-nav-folder-content a {
+  color: var(--ln-color-sage) !important;
 }
 
 h1,
