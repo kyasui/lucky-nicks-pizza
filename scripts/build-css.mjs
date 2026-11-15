@@ -11,6 +11,7 @@ const pages = JSON.parse(
 const cssName = pages.stylesheetFile;
 const docsOut = join(root, "docs", cssName);
 const headerOut = join(root, "code-injection", "header.html");
+const customCssOut = join(root, "code-injection", "custom-css-import.css");
 
 const body = parts
   .map((rel) => readFileSync(join(root, rel), "utf8").trim())
@@ -35,5 +36,12 @@ const header =
 
 writeFileSync(headerOut, header, "utf8");
 
+writeFileSync(
+  customCssOut,
+  `@import url("${href}");\n`,
+  "utf8",
+);
+
 process.stdout.write(`Wrote ${docsOut}\n`);
 process.stdout.write(`Wrote ${headerOut}\n`);
+process.stdout.write(`Wrote ${customCssOut}\n`);

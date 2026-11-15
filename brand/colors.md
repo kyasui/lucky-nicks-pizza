@@ -1,13 +1,19 @@
-# Colors
+# Colors (from logo)
 
-Canonical values live in `src/tokens.css`. Update tokens there, run `pnpm build`, then paste `dist/squarespace-custom.css` into Squarespace.
+Sampled from `brand/assets/logo.png`. Canonical tokens: `src/tokens.css`.
 
-| Token | Hex | Use |
-|-------|-----|-----|
-| `--ln-color-cream` | `#f7f3eb` | Backgrounds, warm neutrals |
-| `--ln-color-charcoal` | `#1a1a1a` | Body text, headings |
-| `--ln-color-tomato` | `#c23b22` | Accent, CTAs (adjust to match live brand) |
-| `--ln-color-olive` | `#4a5d3a` | Secondary accent |
-| `--ln-color-gold` | `#d4a853` | Highlights, badges |
+| Role | Token | Hex | Logo use |
+|------|-------|-----|----------|
+| Background | `--ln-color-white` | `#ffffff` | Logo field |
+| Primary | `--ln-color-sage` | `#6da091` | “Lucky Nick's” script |
+| Primary hover / depth | `--ln-color-sage-dark` | `#5a8779` | Buttons, hover states |
+| Secondary / CTA | `--ln-color-terracotta` | `#d27a62` | Horseshoe, “PIZZA”, 7 |
+| Secondary hover | `--ln-color-terracotta-dark` | `#b8654f` | Link/button hover |
+| Body text | `--ln-color-text` | `#2a3533` | Readable on white |
+| Muted text | `--ln-color-text-muted` | `#4d5c59` | Captions, meta |
 
-Pull final values from the current Squarespace Site Styles when the redesign template is picked.
+## Squarespace Site Styles (optional)
+
+Match **Site Styles → Colors** to sage / terracotta / white so native blocks and your GitHub CSS stay aligned. Details can stay in git CSS.
+
+After token changes: push `main`, then bump `cacheBust` in `config/pages.json` if the live site caches the stylesheet.

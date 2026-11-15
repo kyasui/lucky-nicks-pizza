@@ -1,6 +1,6 @@
 # Lucky Nick's Pizza — Squarespace kit
 
-Version-controlled CSS, code injection, and copy for [luckynickspizza.com](https://www.luckynickspizza.com/). Squarespace is the CMS; **GitHub Pages** serves the custom stylesheet so you edit CSS in git instead of pasting into Custom CSS.
+Version-controlled CSS, code injection, and copy for [luckynickspizza.com](https://www.luckynickspizza.com/). Squarespace is the CMS; **GitHub Pages** serves the custom stylesheet.
 
 ## Layout
 
@@ -9,10 +9,10 @@ Version-controlled CSS, code injection, and copy for [luckynickspizza.com](https
 | `src/tokens.css` | Brand CSS variables |
 | `src/overrides.css` | Squarespace selectors and layout tweaks |
 | `docs/squarespace-custom.css` | Built file published to GitHub Pages |
-| `code-injection/header.html` | Includes `<link>` to GitHub Pages CSS (+ fonts, etc.) |
+| `code-injection/custom-css-import.css` | Single line to paste into Squarespace **Custom CSS** |
+| `code-injection/header.html` | Optional `<link>` for Header injection (fonts, etc.) |
 | `config/pages.json` | GitHub Pages owner, repo name, cache-bust version |
-| `content/` | Page copy, nav, SEO |
-| `reference/staging.md` | Copy-site / injection checklist |
+| `reference/squarespace-custom-code.md` | **2026 navigation** for Pages → Custom Code |
 
 ## CSS workflow (GitHub Pages)
 
@@ -21,7 +21,7 @@ pnpm build
 ```
 
 1. Edit `src/tokens.css` and `src/overrides.css`.
-2. Run `pnpm build` (writes `docs/squarespace-custom.css` and refreshes the `<link>` in `code-injection/header.html`).
+2. Run `pnpm build`.
 3. Commit and push to `main`.
 4. GitHub Actions rebuilds on `src/**` changes and deploys `docs/` to Pages.
 
@@ -29,21 +29,28 @@ pnpm build
 
 `https://kyasui.github.io/lucky-nicks-pizza/squarespace-custom.css`
 
-## Squarespace setup
+## Squarespace setup (staging copy)
 
-On the **staging copy** (see `reference/staging.md`):
+Full UI paths: **`reference/squarespace-custom-code.md`**.
 
-1. **Website → Website Tools → Code Injection → Header** — paste `code-injection/header.html`.
-2. Do **not** duplicate the same rules in **Custom CSS** unless debugging.
-3. After deploy, hard-refresh the site. If styles look stale, increment `cacheBust` in `config/pages.json` and push again.
+### Primary method (all plans): Custom CSS
 
-Requires a plan that includes Code Injection (Core and above on current plans).
+1. Open **Pages** in the site editor.
+2. At the bottom of the panel, open **Custom Code → Custom CSS**.
+3. Paste everything from `code-injection/custom-css-import.css`.
+4. Save and preview (try a private window if logged-in preview looks wrong).
+
+### Optional: Code Injection (Core+ plans)
+
+Same panel: **Custom Code → Code Injection → Header** for `code-injection/header.html` when you add fonts or third-party scripts. Do not rely on **Website → Website Tools** on 7.1 — that path is outdated.
+
+Use **`/`** search and type **Code Injection** or **Custom CSS** if the panel is hard to find.
+
+If styles look stale, increment `cacheBust` in `config/pages.json`, run `pnpm build`, and push.
 
 ## Enable GitHub Pages (one time)
 
-Repo **Settings → Pages → Build and deployment**: **GitHub Actions** (the `pages.yml` workflow deploys the `docs/` folder).
-
-Or use **Deploy from branch → main → /docs** if you prefer branch-based Pages without Actions.
+Repo **Settings → Pages → Build and deployment**: **GitHub Actions** (`pages.yml` deploys `docs/`).
 
 ## Squarespace MCP (Cursor)
 
@@ -52,7 +59,7 @@ Or use **Deploy from branch → main → /docs** if you prefer branch-based Page
 ## Redesign checklist
 
 - [ ] Staging copy pinned in Squarespace dashboard
-- [ ] Code injection on copy
+- [ ] `custom-css-import.css` pasted in **Custom CSS**
 - [ ] Pages deploy green; stylesheet URL loads in browser
 - [ ] Match **Site Styles** to `brand/colors.md` / `src/tokens.css`
 - [ ] Nav matches `content/navigation.md`

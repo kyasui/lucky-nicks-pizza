@@ -1,25 +1,35 @@
 # Staging (Squarespace copy)
 
-Work on the duplicated site (**Lucky Nick's Pizza (Copy)**). Production stays on **www.luckynickspizza.com** until cutover.
+Work on **Lucky Nick's Pizza (Copy)**. Production stays on **www.luckynickspizza.com** until cutover.
 
-## Code injection
+Navigation details: **`squarespace-custom-code.md`** in this folder.
 
-1. On the **copy** site: **Website → Website Tools → Code Injection**.
-2. Paste the full contents of `code-injection/header.html` into **Header**.
-3. Paste `code-injection/footer.html` into **Footer** when needed.
-4. Leave **Website → Custom CSS** empty unless you need a one-off override; theme CSS should load from GitHub Pages.
+## Load theme CSS (recommended)
+
+1. **Pages → Custom Code → Custom CSS** (scroll to the bottom of the Pages panel).
+2. Paste `code-injection/custom-css-import.css` from this repo.
+3. Save.
+
+Works on every billing plan, including Basic.
+
+## Optional header / footer
+
+**Pages → Custom Code → Code Injection** (requires Core, Plus, or Advanced — or eligible legacy plan).
+
+- **Header:** `code-injection/header.html` only if you also want a `<link>` tag there, or for font snippets.
+- **Footer:** `code-injection/footer.html` when needed.
+
+Avoid duplicating the stylesheet in both Custom CSS and Header unless debugging.
 
 ## Stylesheet URL
 
-After the GitHub repo is live and Pages is enabled, the sheet is served at:
-
 `https://kyasui.github.io/lucky-nicks-pizza/squarespace-custom.css`
 
-The copy in `code-injection/header.html` includes `?v=` cache busting — bump `cacheBust` in `config/pages.json` and run `pnpm build` if Squarespace caches an old file.
+Bump `cacheBust` in `config/pages.json` and push if the site caches an old file.
 
 ## Cutover
 
 - [ ] Redesign approved on copy
 - [ ] Commerce/payment re-tested if Shop changed
-- [ ] Match header injection on production (or swap domain to copy per Squarespace plan)
-- [ ] Remove trial restrictions / billing on final site
+- [ ] Same Custom CSS import on production (or domain swap to copy)
+- [ ] Billing on final site
