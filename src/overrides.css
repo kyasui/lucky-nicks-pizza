@@ -1,0 +1,25 @@
+.header-display-desktop,
+.header-display-mobile {
+  font-family: var(--ln-font-body);
+}
+
+h1,
+h2,
+h3,
+.sqs-block-html h1,
+.sqs-block-html h2,
+.sqs-block-html h3 {
+  font-family: var(--ln-font-display);
+  color: var(--ln-color-charcoal);
+}
+
+.sqs-button-element--primary,
+.sqs-block-button-element {
+  border-radius: var(--ln-radius-md);
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --ln-header-height: 64px;
+  }
+}

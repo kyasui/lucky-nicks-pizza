@@ -1,0 +1,8 @@
+{
+  "name": "lucky-nicks-pizza",
+  "private": true,
+  "scripts": {
+    "build:css": "node scripts/build-css.mjs",
+    "build": "pnpm run build:css"
+  }
+}

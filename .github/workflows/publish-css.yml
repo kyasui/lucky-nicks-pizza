@@ -1,0 +1,27 @@
+name: Publish CSS
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "config/pages.json"
+      - "scripts/build-css.mjs"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node scripts/build-css.mjs
+      - uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "chore: rebuild Squarespace stylesheet"
+          file_pattern: "docs/* code-injection/header.html"
