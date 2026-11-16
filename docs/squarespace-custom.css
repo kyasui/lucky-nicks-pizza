@@ -139,36 +139,64 @@ p,
   color: var(--ln-color-white) !important;
 }
 
-.sqs-block-socialaccountlinks-v2 .sqs-use--icon,
-.socialaccountlinks-v2-block .sqs-use--icon,
-.sqs-block-socialaccountlinks-v2 svg,
-.socialaccountlinks-v2-block svg {
-  fill: var(--ln-color-sage) !important;
-  color: var(--ln-color-sage) !important;
+.sqs-block-socialaccountlinks-v2,
+.socialaccountlinks-v2-block,
+.social-account-list-v2-block {
+  --social-links-block-main-color: var(--ln-color-sage);
+  --social-links-block-secondary-color: var(--ln-color-terracotta);
 }
 
-.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper:hover .sqs-use--icon,
-.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .sqs-use--icon {
-  fill: var(--ln-color-terracotta) !important;
-}
-
-.sqs-block-socialaccountlinks-v2 .sqs-use--mask,
-.socialaccountlinks-v2-block .sqs-use--mask {
-  fill: transparent !important;
-}
-
-.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper,
-.socialaccountlinks-v2-block .sqs-svg-icon--wrapper {
+.socialaccountlinks-v2-block .sqs-svg-icon--wrapper,
+.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper {
+  opacity: 1 !important;
   border-color: var(--ln-color-sage) !important;
 }
 
-.sqs-block-socialaccountlinks-v2 a,
-.socialaccountlinks-v2-block a {
-  color: var(--ln-color-sage) !important;
+.socialaccountlinks-v2-block .sqs-use--icon,
+.socialaccountlinks-v2-block .sqs-svg-icon--social,
+.socialaccountlinks-v2-block svg use,
+.sqs-block-socialaccountlinks-v2 .sqs-use--icon,
+.sqs-block-socialaccountlinks-v2 svg use {
+  fill: var(--ln-color-sage) !important;
 }
 
-footer .sqs-block-socialaccountlinks-v2 .sqs-use--icon,
-footer .socialaccountlinks-v2-block .sqs-use--icon {
+.socialaccountlinks-v2-block .social-icons-style-knockout .sqs-use--mask,
+.socialaccountlinks-v2-block .social-icons-style-solid .sqs-use--mask,
+.sqs-block-socialaccountlinks-v2 .social-icons-style-knockout .sqs-use--mask,
+.sqs-block-socialaccountlinks-v2 .social-icons-style-solid .sqs-use--mask {
+  fill: var(--ln-color-sage) !important;
+}
+
+.socialaccountlinks-v2-block .social-icons-style-knockout .sqs-use--icon,
+.socialaccountlinks-v2-block .social-icons-style-solid .sqs-use--icon,
+.sqs-block-socialaccountlinks-v2 .social-icons-style-knockout .sqs-use--icon,
+.sqs-block-socialaccountlinks-v2 .social-icons-style-solid .sqs-use--icon {
+  fill: var(--ln-color-white) !important;
+}
+
+.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .sqs-use--icon,
+.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .sqs-use--mask,
+.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper:hover .sqs-use--icon {
+  fill: var(--ln-color-terracotta) !important;
+}
+
+.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .social-icons-style-knockout .sqs-use--icon,
+.socialaccountlinks-v2-block .social-icons-style-knockout
+  .sqs-svg-icon--wrapper:hover
+  .sqs-use--icon {
+  fill: var(--ln-color-white) !important;
+}
+
+.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .social-icons-style-knockout .sqs-use--mask,
+.socialaccountlinks-v2-block .social-icons-style-knockout
+  .sqs-svg-icon--wrapper:hover
+  .sqs-use--mask {
+  fill: var(--ln-color-terracotta) !important;
+}
+
+.header-actions-action--social svg,
+.header-actions-action--social .sqs-use--icon,
+.header-menu-actions-action--social svg use {
   fill: var(--ln-color-sage) !important;
 }
 
