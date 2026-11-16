@@ -1,58 +1,27 @@
-@import url("https://kyasui.github.io/lucky-nicks-pizza/squarespace-custom.css?v=7");
+@import url("https://kyasui.github.io/lucky-nicks-pizza/squarespace-custom.css?v=8");
 
-footer,
-footer[data-section-type="footer"],
-.sections footer {
-  --social-links-block-main-color: #6da091 !important;
-  --social-links-block-secondary-color: #d27a62 !important;
+[data-definition-name="website.components.socialLinks"],
+.social-account-links-v2-block {
+  --si-primary: #6da091 !important;
+  --si-primary-faded: #d27a62 !important;
+  --si-primary-hover: #5a8779 !important;
 }
 
-footer .sqs-block-socialaccountlinks-v2,
-footer .socialaccountlinks-v2-block {
-  color: #6da091 !important;
+[data-definition-name="website.components.socialLinks"] .sqs-svg-icon--wrapper,
+.social-account-links-v2-block .sqs-svg-icon--wrapper {
+  --si-fill-icon: #6da091 !important;
+  --si-fill-icon-fade: #d27a62 !important;
+  --si-fill-icon-hover: #5a8779 !important;
 }
 
-footer .sqs-block-socialaccountlinks-v2 a,
-footer .socialaccountlinks-v2-block a {
-  opacity: 1 !important;
-  visibility: visible !important;
-  color: #6da091 !important;
-}
-
-footer .sqs-block-socialaccountlinks-v2 svg,
-footer .sqs-block-socialaccountlinks-v2 svg *,
-footer .socialaccountlinks-v2-block svg,
-footer .socialaccountlinks-v2-block svg *,
-footer .sqs-block-socialaccountlinks-v2 .sqs-use--icon,
-footer .sqs-block-socialaccountlinks-v2 .sqs-use--mask,
-footer .socialaccountlinks-v2-block .sqs-use--icon,
-footer .socialaccountlinks-v2-block .sqs-use--mask,
-footer .sqs-block-socialaccountlinks-v2 path,
-footer .socialaccountlinks-v2-block path {
-  fill: #6da091 !important;
-  opacity: 1 !important;
-  visibility: visible !important;
-}
-
-footer .social-icons-style-knockout .sqs-use--mask,
-footer .social-icons-style-solid .sqs-use--mask {
+[data-definition-name="website.components.socialLinks"] .sqs-use--icon,
+.social-account-links-v2-block .sqs-use--icon,
+[data-definition-name="website.components.socialLinks"] path,
+.social-account-links-v2-block path {
   fill: #6da091 !important;
 }
 
-footer .social-icons-style-knockout .sqs-use--icon,
-footer .social-icons-style-solid .sqs-use--icon {
-  fill: #ffffff !important;
-}
-
-footer .sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper,
-footer .socialaccountlinks-v2-block .sqs-svg-icon--wrapper {
-  opacity: 1 !important;
-  visibility: visible !important;
-  min-width: 36px !important;
-  min-height: 36px !important;
-}
-
-footer .instagram-unauth .sqs-use--icon,
-footer [class*="instagram"] .sqs-use--icon {
-  fill: #6da091 !important;
+[data-definition-name="website.components.socialLinks"] .sqs-svg-icon--wrapper:hover .sqs-use--icon,
+.social-account-links-v2-block .sqs-svg-icon--wrapper:hover .sqs-use--icon {
+  fill: #d27a62 !important;
 }

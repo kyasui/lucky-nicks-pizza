@@ -1,41 +1,37 @@
-# Social Links block (7.1)
+# Social Links block (7.1 — website component)
 
 Official: [Social Links Blocks](https://support.squarespace.com/hc/en-us/articles/205814468-Social-Links-Blocks)
 
-Work on **https://drum-scarlet-4t54.squarespace.com/** only.
+Staging: **https://drum-scarlet-4t54.squarespace.com/**
 
-## Empty block vs invisible icons
+## Empty block (most common)
 
-| Symptom | Fix |
-|---------|-----|
-| Empty box, nothing to click | **Content** tab → **Add social link** → URL → **Display Social Icon** on |
-| Clicks work but nothing visible | Site Styles **Main Color** is white — see below |
-| Visible in editor, not when logged out | Broken **Code Injection** HTML, or Custom CSS not saved on **this** site |
+If markup looks like this, **CSS cannot help**:
 
-## Colors (Site Styles — required once if palette is all white)
+```html
+<nav class="sqs-svg-icon--list">
+</nav>
+```
 
-GitHub CSS sets icon colors, but Squarespace still applies **section color themes**:
+There are **zero** links inside the list. Add accounts:
 
-1. Edit the **footer** (or page with the block).
-2. **Site Styles** (paintbrush) → **Colors**.
-3. Click the **pencil** on the **footer section’s** color theme (not only global).
-4. Scroll to **Social links block** → set **Main Color** to `#6DA091`, **Secondary** to `#D27A62` if shown.
-5. Save.
+1. Click the block → pencil.
+2. **Content** → **Add social link** (or connect Instagram, etc.).
+3. Enter URL, turn **Display social icon** on.
+4. Save the page.
 
-## Block **Design** tab (easiest visible combo on white)
+Until `<nav class="sqs-svg-icon--list">` contains `<a>` / icon wrappers, the footer stays blank.
 
-- **Border:** Circle  
-- **Style:** **Solid** or **Outline** (avoid Knockout until Main Color is fixed)  
-- **Size:** M or L  
+## New component markup
+
+Squarespace now uses `data-definition-name="website.components.socialLinks"` and icon color variables **`--si-primary`**, **`--si-fill-icon`**, not only the old `socialaccountlinks-v2-block` classes.
+
+This repo sets those in GitHub CSS and in the snippet **below** the `@import` in `custom-css-import.css`.
 
 ## Custom CSS on staging
 
-Must be on **drum-scarlet**, not production.
+**Pages → Custom Code → Custom CSS** — paste the **entire** `code-injection/custom-css-import.css` (import + trailing rules). Update `?v=` when the repo bumps `cacheBust`.
 
-1. Open **Pages → Custom Code → Custom CSS**.
-2. **Select all, delete**, then paste the **entire** `code-injection/custom-css-import.css` file from the repo.
+## All-white Site Styles
 
-That file is two parts:
-
-- `@import` → GitHub theme CSS  
-- Rules **after** the import → footer social overrides that beat an all-white palette (they must stay in Squarespace below the import line; do not paste only the `@import` by itself).
+After links exist, if icons are still white, block **Design** → try **Solid** + **Circle**; or **Site Styles → Colors** → edit the **footer section** theme → **Social links block → Main color** → `#6DA091`.
