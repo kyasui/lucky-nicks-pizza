@@ -113,19 +113,30 @@ p,
   color: var(--ln-color-white) !important;
 }
 
+footer,
+footer .sections,
 .sqs-block-socialaccountlinks-v2,
 .socialaccountlinks-v2-block,
 .social-account-list-v2-block {
-  --social-links-block-main-color: var(--ln-color-sage);
-  --social-links-block-secondary-color: var(--ln-color-terracotta);
+  --social-links-block-main-color: var(--ln-color-sage) !important;
+  --social-links-block-secondary-color: var(--ln-color-terracotta) !important;
+}
+
+.socialaccountlinks-v2-block .sqs-svg-icon--list,
+.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--list {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .socialaccountlinks-v2-block .sqs-svg-icon--wrapper,
 .sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper {
   opacity: 1 !important;
+  visibility: visible !important;
   border-color: var(--ln-color-sage) !important;
 }
 
+.socialaccountlinks-v2-block path,
+.sqs-block-socialaccountlinks-v2 path,
 .socialaccountlinks-v2-block .sqs-use--icon,
 .socialaccountlinks-v2-block .sqs-svg-icon--social,
 .socialaccountlinks-v2-block svg use,
@@ -134,37 +145,31 @@ p,
   fill: var(--ln-color-sage) !important;
 }
 
-.socialaccountlinks-v2-block .social-icons-style-knockout .sqs-use--mask,
-.socialaccountlinks-v2-block .social-icons-style-solid .sqs-use--mask,
-.sqs-block-socialaccountlinks-v2 .social-icons-style-knockout .sqs-use--mask,
-.sqs-block-socialaccountlinks-v2 .social-icons-style-solid .sqs-use--mask {
+.socialaccountlinks-v2-block .sqs-use--mask,
+.sqs-block-socialaccountlinks-v2 .sqs-use--mask {
   fill: var(--ln-color-sage) !important;
 }
 
 .socialaccountlinks-v2-block .social-icons-style-knockout .sqs-use--icon,
-.socialaccountlinks-v2-block .social-icons-style-solid .sqs-use--icon,
-.sqs-block-socialaccountlinks-v2 .social-icons-style-knockout .sqs-use--icon,
-.sqs-block-socialaccountlinks-v2 .social-icons-style-solid .sqs-use--icon {
+.socialaccountlinks-v2-block .social-icons-style-knockout path,
+.sqs-block-socialaccountlinks-v2 .social-icons-style-knockout .sqs-use--icon {
   fill: var(--ln-color-white) !important;
 }
 
+.socialaccountlinks-v2-block .social-icons-style-knockout .sqs-use--mask,
+.sqs-block-socialaccountlinks-v2 .social-icons-style-knockout .sqs-use--mask {
+  fill: var(--ln-color-sage) !important;
+}
+
+.socialaccountlinks-v2-block .social-icons-style-outline .sqs-svg-icon--wrapper,
+.sqs-block-socialaccountlinks-v2 .social-icons-style-outline .sqs-svg-icon--wrapper {
+  box-shadow: inset 0 0 0 2px var(--ln-color-sage);
+}
+
+.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover path,
 .socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .sqs-use--icon,
 .socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .sqs-use--mask,
 .sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper:hover .sqs-use--icon {
-  fill: var(--ln-color-terracotta) !important;
-}
-
-.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .social-icons-style-knockout .sqs-use--icon,
-.socialaccountlinks-v2-block .social-icons-style-knockout
-  .sqs-svg-icon--wrapper:hover
-  .sqs-use--icon {
-  fill: var(--ln-color-white) !important;
-}
-
-.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .social-icons-style-knockout .sqs-use--mask,
-.socialaccountlinks-v2-block .social-icons-style-knockout
-  .sqs-svg-icon--wrapper:hover
-  .sqs-use--mask {
   fill: var(--ln-color-terracotta) !important;
 }
 
