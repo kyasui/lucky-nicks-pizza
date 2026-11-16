@@ -113,6 +113,39 @@ p,
   color: var(--ln-color-white) !important;
 }
 
+.sqs-block-socialaccountlinks-v2 .sqs-use--icon,
+.socialaccountlinks-v2-block .sqs-use--icon,
+.sqs-block-socialaccountlinks-v2 svg,
+.socialaccountlinks-v2-block svg {
+  fill: var(--ln-color-sage) !important;
+  color: var(--ln-color-sage) !important;
+}
+
+.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper:hover .sqs-use--icon,
+.socialaccountlinks-v2-block .sqs-svg-icon--wrapper:hover .sqs-use--icon {
+  fill: var(--ln-color-terracotta) !important;
+}
+
+.sqs-block-socialaccountlinks-v2 .sqs-use--mask,
+.socialaccountlinks-v2-block .sqs-use--mask {
+  fill: transparent !important;
+}
+
+.sqs-block-socialaccountlinks-v2 .sqs-svg-icon--wrapper,
+.socialaccountlinks-v2-block .sqs-svg-icon--wrapper {
+  border-color: var(--ln-color-sage) !important;
+}
+
+.sqs-block-socialaccountlinks-v2 a,
+.socialaccountlinks-v2-block a {
+  color: var(--ln-color-sage) !important;
+}
+
+footer .sqs-block-socialaccountlinks-v2 .sqs-use--icon,
+footer .socialaccountlinks-v2-block .sqs-use--icon {
+  fill: var(--ln-color-sage) !important;
+}
+
 @media screen and (max-width: 767px) {
   :root {
     --ln-header-height: 64px;
