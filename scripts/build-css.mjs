@@ -36,9 +36,11 @@ const header =
 
 writeFileSync(headerOut, header, "utf8");
 
+const criticalPath = join(root, "src", "critical-after-import.css");
+const critical = readFileSync(criticalPath, "utf8").trim();
 writeFileSync(
   customCssOut,
-  `@import url("${href}");\n`,
+  `@import url("${href}");\n\n${critical}\n`,
   "utf8",
 );
 

@@ -30,4 +30,12 @@ GitHub CSS sets icon colors, but Squarespace still applies **section color theme
 
 ## Custom CSS on staging
 
-Must be on **drum-scarlet**, not production. Use latest `?v=` from `code-injection/custom-css-import.css`.
+Must be on **drum-scarlet**, not production.
+
+1. Open **Pages → Custom Code → Custom CSS**.
+2. **Select all, delete**, then paste the **entire** `code-injection/custom-css-import.css` file from the repo.
+
+That file is two parts:
+
+- `@import` → GitHub theme CSS  
+- Rules **after** the import → footer social overrides that beat an all-white palette (they must stay in Squarespace below the import line; do not paste only the `@import` by itself).
